@@ -1,0 +1,71 @@
+.accordion details {
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  
+  margin-bottom: 1rem
+}
+
+/* Espaciado entre ítems */
+.accordion details + details {
+  margin-top: 24px;
+}
+
+/* Estilo para los párrafos dentro del cuerpo */
+.accordion details p {
+  margin: 0;
+}
+
+/* Estilo del encabezado del acordeón */
+.accordion details summary {
+  background-color: #fff;
+  position: relative;
+  padding: 16px;
+  padding-right: 40px;
+  cursor: pointer;
+  list-style: none;
+  font-weight: bold;
+  color: #1b1b1b;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+  border: none;
+  box-shadow: 0 0 4px 0 rgba(0,0,0,0.1), 0 5px 5px -5px rgba(0,34,77,0.25);
+}
+
+/* Al pasar el mouse o enfocar */
+.accordion details summary:focus,
+.accordion details summary:hover {
+  background-color: #e5edf5;
+}
+
+/* Ocultar el ícono nativo */
+.accordion details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Triángulo azul apuntando hacia abajo */
+.accordion details summary::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #0073e6; /* azul */
+  transition: all 0.3s ease;
+}
+
+/* Cambiar el triángulo a apuntar hacia arriba al abrir */
+.accordion details[open] summary::after {
+  border-top: none;
+  border-bottom: 6px solid #0073e6;
+}
+
+/* Contenedor del cuerpo del acordeón */
+.accordion details .accordion-item-body {
+  padding: 12px 16px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #dadada;
+}
