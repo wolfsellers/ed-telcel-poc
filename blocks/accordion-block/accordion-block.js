@@ -10,14 +10,14 @@ const groupContentByTag = (childNodes,tag) => {
         } else {
             div.append(element);
         }
-    });
+    });    
     return principalContainer;
 }
 
 export default function decorate(block) {
     try {
         const items = block.querySelectorAll(':scope > div');
-        const accordionItems = {};
+        const accordionItems = [];
         items.forEach(element => {
             const childs = element.querySelectorAll(':scope > div');
             const titleContainer = childs[0].querySelector('p').innerHTML;
@@ -26,9 +26,10 @@ export default function decorate(block) {
             contentContainer.classList.add(className);
             if(className === 'otras-formas-de-compra') {
                 const newAgrupedContent = groupContentByTag(Array.from(contentContainer.childNodes), 'hr');
-                contentContainer.replaceWith(newAgrupedContent);
+                contentContainer.innerHTML = "";
+                contentContainer.append(newAgrupedContent);
             }
-            console.log('titleContainer', className, contentContainer);
+            accordionItems.push(contentContainer);
         });
         console.log('accordionItems', accordionItems);
         block.innerHTML = '';
