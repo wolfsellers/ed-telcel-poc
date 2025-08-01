@@ -110,7 +110,7 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 export default async function decorate(block) {
   // load nav as fragment
   const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/es/nav';
   const fragment = await loadFragment(navPath);
 
   // decorate nav DOM
@@ -118,6 +118,39 @@ export default async function decorate(block) {
   const nav = document.createElement('nav');
   nav.id = 'nav';
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
+
+  const images = nav.querySelectorAll('picture');
+  console.log('images',images);
+  
+  const claroImagen = images[0];
+  const mexImagen = images[1];
+  const content = document.createElement('div');
+  content.innerHTML = `
+    <div class="header-container">
+      <div class="tabs">
+        <a class="tab active">PERSONAS</a>
+        <a class="tab">EMPRESAS</a>
+      </div>
+      <div class="extras">
+        <div class="claro-shop">
+          ${claroImagen.outerHTML}
+        </div>
+        <div class="travel-mexico">${mexImagen.outerHTML} Travel to México</div>
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Buscar..." />
+        </div>
+      </div>
+    </div>
+  `;
+  
+  document.body.appendChild(content); // o donde necesites insertarlo
+  
+  console.log('content', content);
+
+
+  block.replaceWith(content)
+
+  return
 
   const classes = ['brand', 'sections', 'tools'];
   classes.forEach((c, i) => {
