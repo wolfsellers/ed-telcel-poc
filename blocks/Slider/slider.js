@@ -136,14 +136,14 @@ const Slider = (props) => {
       class=${`embla__button embla__button--prev ${showArrows ? '' : 'hide_items_slider'}`}
       aria-label="Ir al slide anterior"
     >
-      ${html`<${ChevronLeftIcon} class='pruebaIcon' />`}
+      ${html`<${ChevronLeftIcon} class='embla__arrow' />`}
     </button>
     <button 
       ref=${nextBtnRef} 
       class=${`embla__button embla__button--next ${showArrows ? '' : 'hide_items_slider'}`}
       aria-label="Ir al siguiente slide"
     >
-      ${html`<${ChevronRigthIcon} class='pruebaIcon' />`}
+      ${html`<${ChevronRigthIcon} class='embla__arrow' />`}
     </button>
     <div ref=${dotsWrapperRef} class=${`embla__dots ${showDots ? '' : 'hide_items_slider'}`}></div>
     </div>

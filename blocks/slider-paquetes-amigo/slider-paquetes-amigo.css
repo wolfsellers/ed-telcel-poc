@@ -1,0 +1,48 @@
+.item-blog-slider-row-titles h2{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #eaeaea;
+    text-align: left;
+    font-family: "Hind", sans-serif;
+}
+
+.item-blog-slider-row-titles h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #4e4d52;
+    height: 70px;
+    text-align: left;
+    font-family: "Hind", sans-serif;
+}
+
+.item-blog-slider-row-text p {
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 40px;
+    font-family: "Hind", sans-serif;
+}
+
+.item-blog-slider-row-link {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.item-blog-slider-row-link a {
+    text-align: left;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Hind", sans-serif;
+    color: #333;
+}
+
+.item-blog-slider-row-link a:hover {
+    color: #ed1c24;
+}
+
+@media only screen and (max-width: 550px) {
+    .titleSliderBannerHome h1 {
+        font-size: 50px;
+    }
+}
