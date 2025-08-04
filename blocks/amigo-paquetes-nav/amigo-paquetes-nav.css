@@ -1,0 +1,76 @@
+.amigo-paquetes-nav-container.section {
+	background-color: #F1F6F9;
+	margin: 20px 0;
+}
+
+.amigo-paquetes-nav {
+	box-sizing: border-box;
+	display: flex;
+	height: 72px;
+	justify-content: space-between;
+	max-width: 1020px;
+	margin: 0 auto;
+	overflow-x: scroll;
+	scrollbar-width: none;
+
+	@media (width >= 1024px) {
+		padding: 0 50px;
+	}
+}
+
+.amigo-paquetes-nav .nav-option {
+	align-items: center;
+	box-sizing: border-box;
+	color: #0071D1;
+	display: grid;
+	gap: 4px;
+	margin: 0 12px;
+	max-width: 200px;
+	min-width: 130px;
+	padding-inline: 16px;
+	width: 100%;
+
+	@media (width >= 768px) {
+		grid-template-columns: 32px 1fr;
+		margin: 0 17px;
+		padding-inline: 8px;
+	}
+}
+
+.amigo-paquetes-nav .nav-option.active {
+	background: #FFF;
+	border-bottom: 4px solid #0A3D7E;
+	color: #0A3D7E;
+	transition: all 100ms ease-in-out;
+}
+
+.amigo-paquetes-nav .nav-option picture {
+	display: none;
+	height: 0;
+	line-height: 0;
+	width: 0;
+
+	@media (width >= 768px) {
+		display: block;
+		height: 32px;
+		width: 32px;
+	}
+}
+
+.amigo-paquetes-nav .nav-option img {
+	height: inherit;
+	width: 32px;
+}
+
+.amigo-paquetes-nav .nav-option a {
+	color: currentcolor;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.4;
+	text-align: center;
+
+	@media (width >= 768px) {
+		font-size: 16px;
+		text-align: left;
+	}
+}

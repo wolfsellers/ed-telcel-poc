@@ -1,0 +1,74 @@
+.embla {
+	position: relative;
+	overflow: hidden;
+	max-width: 100%;
+	margin: auto;
+}
+
+.embla__viewport {
+	overflow: hidden;
+}
+
+.embla__container {
+	display: flex;
+}
+
+.embla__slide {
+	padding: 2rem;
+	text-align: center;
+}
+
+.embla__button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(0, 0, 0, 0);
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
+.embla__button:is(:active, :focus, :hover) {
+	background-color: transparent;
+}
+
+.embla__arrow {
+	width: 2rem;
+	height: 2rem;
+	color: #333;
+}
+
+.embla__button--prev {
+	left: -15px;
+}
+
+.embla__button--next {
+	right: -15px;
+}
+
+.embla__dots {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.dot {
+	background: none;
+	font-size: 1.2rem;
+	cursor: pointer;
+	padding: 7px;
+	border: 1px solid #ccc;
+	margin: 0 5px;
+}
+
+.dot.is-selected {
+	background-color: #1C1918;
+}
+
+.embla__slide {
+	flex: 0 0 100%;
+}
+
+.hide_items_slider {
+	display: none;
+}

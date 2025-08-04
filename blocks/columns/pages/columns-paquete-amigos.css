@@ -1,0 +1,17 @@
+.columns-paquete-amigos h1,
+.columns-paquete-amigos h2,
+.columns-paquete-amigos h3 {
+	margin: 20px 0;
+}
+
+.columns-paquete-amigos h1 {
+	font-size: 36px;
+}
+
+.columns-paquete-amigos h2 {
+	font-size: 32px;
+}
+
+.columns-paquete-amigos h3 {
+	font-size: 24px;
+}
