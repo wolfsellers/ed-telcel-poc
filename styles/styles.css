@@ -267,25 +267,50 @@ main .section.highlight {
     color: #00529b;
 }
 
-.plan-renta {
+.plan-renta-top {
   display: flex;
-  height: 80px;
+  height: 72px;
   flex-direction: column;
   gap: 16px;
   background-color: #f2f7f9;
   margin-top: 3rem;
   margin-bottom: 5rem;
   text-align: center;
+  justify-content: center;
   
 }
-.plan-renta p{
+
+.plan-renta-top p{
     font-size: 16px;
     font-weight: bold;
-    color: #0071d1;
-    padding-left: 1rem;
+    color: #0071d1!important;
+  
 
 }
+.plan-renta-top a {
+    
+    background-color: transparent !important;
+    color: #0071d1!important;
+    height: 72px !important;
+    min-width: 133px;
+    max-width: 172px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 0 !important;
+    justify-self: center !important;
+    border: none !important;
+}
 
+.plan-renta-top a:hover {
+    background-color: white !important;
+    color: #0071d1!important;
+   border-bottom: 4px solid rgb(10, 61, 126) !important;
+}
+.plan-renta-top a:active {
+    background-color: white !important;
+    color: #0071d1!important;
+}
 .plan-renta-tab-1{
 
     max-width: 1020px;
@@ -353,7 +378,7 @@ main .section.highlight {
 }
 
 .plan-renta-tab-2 > div > div > p:nth-child(2) strong{
-       font-size: 16px;
+    font-size: 16px;
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
     margin-left: 4px;
@@ -365,6 +390,81 @@ main .section.highlight {
     border-left: 1px solid #d0d0d0;
 }
 
+.plan-renta-tab-3 {
+
+    max-width: 864px;
+    margin: auto;
+    margin-block: 1rem;
+        border: 1px solid #0071d1;
+    border-radius: 4px;
+    background-color: #f2f7f9;
+
+}
+.plan-renta-tab-3 > div {
+
+    display: grid !important;
+    grid-template-columns: 1fr 2fr;
+}
+
+.plan-renta-tab-3 > div > div {
+  
+    padding-inline: 2rem;
+    border-left: 1px solid #d0d0d0;
+}
+.plan-renta-tab-3 > div > div >ul {
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 14px;
+    gap: 8px;
+}
+.plan-renta-tab-3 > div > div >ul li {
+
+    position: relative !important;
+    list-style: none;
+}
+
+.plan-renta-tab-3 > div > div >ul li::after {
+  content: ' ';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left:-19px;
+    top: 4.5px;
+    background-size: cover;
+    background-image: url('../icons/icon-interface-success.svg');
+}
+.plan-renta-tab-3 em {
+    font-style: normal;
+        
+    font-size: 34px;
+    color: #c71585;
+    font-family: telcelregular;
+    margin-bottom: 8px;
+    font-weight: bolder;
+    margin-top: 4px;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+.plan-renta-tab-3 p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.plan-renta-tab-3 > div > div > p:nth-child(2) strong{
+       font-size: 16px;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    margin-left: 4px;
+    color: #757575;
+    
+}
+.plan-renta-tab-3 > div > div > table {
+
+    border-left: 1px solid #d0d0d0;
+}
+
+
 .text-bottom-tab-2{
     
     max-width: 864px;
@@ -374,15 +474,209 @@ main .section.highlight {
         font-size: 14px;
     color: #757575;
     margin-top: 24px;
-    margin-bottom: 24px !important;
+    margin-bottom: 0px !important;
 
 }
 .plan-renta-iconos{
-    max-width: 864px;
     margin: auto;
     margin-block: 1rem;
+    margin-bottom: 6rem;
+}
+.plan-renta-iconos > div {
+    display: grid !important;
+    justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
 }
 
 .plan-renta-iconos p{
    width:138px !important;
+}
+.plan-renta-button-purpure{
+    margin-bottom: 2rem;
+}
+
+.plan-renta-button-purpure .button-container{
+    width:100% ;
+    margin: auto;
+    text-align: center;
+}
+
+.plan-renta-button-purpure .button-container a {
+    width: 100%;
+    color: #fff;
+    max-width: 300px;
+    margin: auto;
+    background-color: #7b1fa2;
+}
+.plan-renta-button-purpure .button-container a:hover {
+   box-shadow: 0 0 4px 0 rgba(0,0,0,0.1), 0 5px 5px -5px rgba(123,31,162,0.25);
+   background-color: #6a1b9a;
+}
+.plan-renta-title-1{
+    text-align: center;
+    color: #222;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 1.4148rem + 0.4261vw, 1.6875rem);
+
+}
+.plan-renta-title-2{
+    text-align: center;
+    color: #222;
+    font-weight: 400;
+    font-size: clamp(1.25rem, 1.1364rem + 0.5682vw, 1.5rem);
+}
+.plan-renta-title-1 p {
+    margin-bottom: 0;
+}
+.plan-renta-title-2 p {
+    margin-top: 0;
+}
+.plan-renta-title-3 {
+    text-align: center;
+    border-bottom: 1px solid #e4eef2;
+    margin-top: 5rem;
+    
+}
+
+.plan-renta-title-3 p {
+    font-size: 18px;
+     color: #222;
+    font-weight: 400;
+}
+.plan-renta-title-3 a{
+    font-weight: bold;
+}
+.plan-renta-title-4{
+     font-size: 16px;
+     color: #222;
+    font-weight: 400;
+    margin-bottom: 5rem;
+}
+
+.plan-renta-title-4 a{
+    font-weight: bold;
+}
+
+.plan-renta-title-5{
+    font-size: 16px;
+    color: #222;
+    font-weight: 400;
+    text-align: center;
+    border-top: 1px solid black;
+    height: 100px;
+    background-color: #f8f8f8;
+    align-content: center;
+    margin-bottom: 15rem;
+}
+
+.plan-renta-title-5 p {
+    margin: 0;
+}
+
+.plan-renta-title-5 strong{
+    font-weight: bolder;
+    font-size: 24px;
+    color: #144f77;
+    
+}
+.plan-renta-title-5 a{
+    font-weight: bold;
+}
+
+.plan-renta-comp-destacados{
+}
+
+.plan-renta-comp-destacados > div {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: baseline !important;
+}
+
+.plan-renta-comp-destacados > div h2 {
+
+   font-size: clamp(0.875rem, 0.8072rem + 0.3012vw, 1rem);
+   text-align: center;
+   margin-bottom: 2rem;
+}
+.plan-renta-comp-destacados > div p {
+    font-style: normal;
+   font-size: clamp(0.875rem, 0.8072rem + 0.3012vw, 1rem);
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
+.telcel-destacado-descriptivo{
+   border-radius: 4px;
+    background-color: #e5edf5;
+    max-width: 1100px;
+    margin: auto;
+    margin-block: 3rem;
+    padding-inline: 2rem;
+    margin-bottom: 5rem;
+}
+
+.telcel-destacado-descriptivo h3 {
+    color: #0a3d7e;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 1.17;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.telcel-destacado-descriptivo p {
+    max-width: 400px;
+    font-size: clamp(0.875rem, 0.8072rem + 0.3012vw, 1rem);
+}
+
+.telcel-destacado-descriptivo p a{
+    color: #fff;
+    width: 300px;
+    margin: auto;
+    background-color: #7b1fa2 !important;
+    border-radius: 4px !important;
+}
+
+.telcel-destacado-descriptivo img {
+    top: -1.5rem;
+    position: relative;
+    left: 2rem;
+}
+
+
+
+
+@media (max-width: 767px) {
+    .plan-renta-iconos > div,
+    .plan-renta-comp-destacados > div {
+        grid-template-columns: 1fr;
+    }
+    .plan-renta-iconos > div{
+        gap: 16px;
+    }
+    .telcel-destacado-descriptivo img {
+        top: -1.5rem;
+        position: relative;
+        left: 0; 
+    }
+    
+}
+@media (max-width: 900px) {
+    .plan-renta-top >div{
+        align-self: center !important;
+        flex-direction: unset !important;
+        gap: 1rem !important;  
+    }
+    .plan-renta-tab-3 > div > div >ul {
+  
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .plan-renta-tab-3 > div {
+
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
 }
