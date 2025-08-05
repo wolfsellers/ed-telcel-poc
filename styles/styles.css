@@ -267,25 +267,50 @@ main .section.highlight {
     color: #00529b;
 }
 
-.plan-renta {
+.plan-renta-top {
   display: flex;
-  height: 80px;
+  height: 72px;
   flex-direction: column;
   gap: 16px;
   background-color: #f2f7f9;
   margin-top: 3rem;
   margin-bottom: 5rem;
   text-align: center;
+  justify-content: center;
   
 }
-.plan-renta p{
+
+.plan-renta-top p{
     font-size: 16px;
     font-weight: bold;
-    color: #0071d1;
-    padding-left: 1rem;
+    color: #0071d1!important;
+  
 
 }
+.plan-renta-top a {
+    
+    background-color: transparent !important;
+    color: #0071d1!important;
+    height: 72px !important;
+    min-width: 133px;
+    max-width: 172px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 0 !important;
+    justify-self: center !important;
+    border: none !important;
+}
 
+.plan-renta-top a:hover {
+    background-color: white !important;
+    color: #0071d1!important;
+   border-bottom: 4px solid rgb(10, 61, 126) !important;
+}
+.plan-renta-top a:active {
+    background-color: white !important;
+    color: #0071d1!important;
+}
 .plan-renta-tab-1{
 
     max-width: 1020px;
@@ -353,7 +378,7 @@ main .section.highlight {
 }
 
 .plan-renta-tab-2 > div > div > p:nth-child(2) strong{
-       font-size: 16px;
+    font-size: 16px;
     font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 600;
     margin-left: 4px;
@@ -364,6 +389,81 @@ main .section.highlight {
 
     border-left: 1px solid #d0d0d0;
 }
+
+.plan-renta-tab-3 {
+
+    max-width: 864px;
+    margin: auto;
+    margin-block: 1rem;
+        border: 1px solid #0071d1;
+    border-radius: 4px;
+    background-color: #f2f7f9;
+
+}
+.plan-renta-tab-3 > div {
+
+    display: grid !important;
+    grid-template-columns: 1fr 2fr;
+}
+
+.plan-renta-tab-3 > div > div {
+  
+    padding-inline: 2rem;
+    border-left: 1px solid #d0d0d0;
+}
+.plan-renta-tab-3 > div > div >ul {
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 14px;
+    gap: 8px;
+}
+.plan-renta-tab-3 > div > div >ul li {
+
+    position: relative !important;
+    list-style: none;
+}
+
+.plan-renta-tab-3 > div > div >ul li::after {
+  content: ' ';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left:-19px;
+    top: 4.5px;
+    background-size: cover;
+    background-image: url('../icons/icon-interface-success.svg');
+}
+.plan-renta-tab-3 em {
+    font-style: normal;
+        
+    font-size: 34px;
+    color: #c71585;
+    font-family: telcelregular;
+    margin-bottom: 8px;
+    font-weight: bolder;
+    margin-top: 4px;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+.plan-renta-tab-3 p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.plan-renta-tab-3 > div > div > p:nth-child(2) strong{
+       font-size: 16px;
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    margin-left: 4px;
+    color: #757575;
+    
+}
+.plan-renta-tab-3 > div > div > table {
+
+    border-left: 1px solid #d0d0d0;
+}
+
 
 .text-bottom-tab-2{
     
@@ -494,8 +594,18 @@ main .section.highlight {
 }
 
 .plan-renta-comp-destacados > div h2 {
-   height: 100px;
+
+   font-size: clamp(0.875rem, 0.8072rem + 0.3012vw, 1rem);
+   text-align: center;
+   margin-bottom: 2rem;
 }
+.plan-renta-comp-destacados > div p {
+    font-style: normal;
+   font-size: clamp(0.875rem, 0.8072rem + 0.3012vw, 1rem);
+   text-align: center;
+   margin-bottom: 2rem;
+}
+
 .telcel-destacado-descriptivo{
    border-radius: 4px;
     background-color: #e5edf5;
@@ -517,7 +627,7 @@ main .section.highlight {
 
 .telcel-destacado-descriptivo p {
     max-width: 400px;
-    font-size: clamp(1rem, 0.7967rem + 0.9036vw, 1.375rem);
+    font-size: clamp(0.875rem, 0.8072rem + 0.3012vw, 1rem);
 }
 
 .telcel-destacado-descriptivo p a{
@@ -535,6 +645,8 @@ main .section.highlight {
 }
 
 
+
+
 @media (max-width: 767px) {
     .plan-renta-iconos > div,
     .plan-renta-comp-destacados > div {
@@ -549,4 +661,22 @@ main .section.highlight {
         left: 0; 
     }
     
+}
+@media (max-width: 900px) {
+    .plan-renta-top >div{
+        align-self: center !important;
+        flex-direction: unset !important;
+        gap: 1rem !important;  
+    }
+    .plan-renta-tab-3 > div > div >ul {
+  
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .plan-renta-tab-3 > div {
+
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
 }
